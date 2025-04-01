@@ -1,0 +1,31 @@
+{
+  "name": "@pieced/style-config-webpack-plugin",
+  "version": "1.1.0",
+  "description": "Automatically configuration webpack5 style loader",
+  "author": "mingdev <mingdev@163.com>",
+  "license": "MIT",
+  "main": "./dist/StyleConfigWebpackPlugin.js",
+  "scripts": {
+    "build": "babel src --out-dir dist"
+  },
+  "dependencies": {
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.7.2",
+    "postcss-loader": "^7.0.2",
+    "postcss-preset-env": "^8.0.1",
+    "style-loader": "^3.3.1"
+  },
+  "peerDependencies": {
+    "webpack": ">=5.0.0"
+  },
+  "homepage": "https://github.com/pieced-team/webpack-config",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "webpack",
+    "webpack-plugin"
+  ]
+}

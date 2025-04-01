@@ -1,0 +1,26 @@
+{
+  "name": "@pieced/media-config-webpack-plugin",
+  "version": "1.1.0",
+  "description": "Automatically configuration webpack5 media loader",
+  "author": "mingdev <mingdev@163.com>",
+  "license": "MIT",
+  "main": "./dist/MediaConfigWebpackPlugin.js",
+  "scripts": {
+    "build": "babel src --out-dir dist"
+  },
+  "dependencies": {
+    "@pieced/image-config-webpack-plugin": "workspace:*",
+    "lodash": "^4.17.21"
+  },
+  "peerDependencies": {
+    "webpack": ">=5.0.0"
+  },
+  "homepage": "https://github.com/pieced-team/webpack-config",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "webpack",
+    "webpack-plugin"
+  ]
+}
