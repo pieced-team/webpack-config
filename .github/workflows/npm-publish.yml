@@ -41,7 +41,7 @@ jobs:
       - name: Publish Package
         run: |
           pnpm run build
-          pnpm -r --filter=./packages/* publish --access public
+          pnpm -r --filter=./packages/* publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
