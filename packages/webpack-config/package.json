@@ -1,0 +1,39 @@
+{
+  "name": "@pieced/webpack-config",
+  "version": "1.1.0",
+  "description": "webpack configuration",
+  "author": "mingdev <mingdev@163.com>",
+  "license": "MIT",
+  "main": "./dist/webpackConfig.js",
+  "scripts": {
+    "build": "babel src --out-dir dist"
+  },
+  "dependencies": {
+    "@pieced/font-config-webpack-plugin": "workspace:*",
+    "@pieced/image-config-webpack-plugin": "workspace:*",
+    "@pieced/js-config-webpack-plugin": "workspace:*",
+    "@pieced/media-config-webpack-plugin": "workspace:*",
+    "@pieced/style-config-webpack-plugin": "workspace:*",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.16",
+    "copy-webpack-plugin": "^13.0.0",
+    "dotenv-webpack": "^8.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "webpack-merge": "^6.0.1",
+    "webpackbar": "^7.0.0",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  },
+  "peerDependencies": {
+    "webpack": ">=5.0.0"
+  },
+  "homepage": "https://github.com/pieced-team/webpack-config",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "webpack",
+    "webpack-config",
+    "config"
+  ]
+}
