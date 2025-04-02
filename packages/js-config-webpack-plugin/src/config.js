@@ -1,5 +1,6 @@
 const path = require('path');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const { findPackageData } = require('@babel/core/lib/config/files/package');
 const { findRelativeConfig } = require('@babel/core/lib/config/files/configuration');
 const { findRootConfig } = require('@babel/core/lib/config/files/configuration');
@@ -61,7 +62,11 @@ module.exports = (options) => ({
           ['@babel/preset-env', { modules: false }],
           '@babel/preset-react',
         ],
-        plugins: ['@pieced/babel-plugin-auto-css-modules'],
+        plugins: [
+          '@pieced/babel-plugin-auto-css-modules',
+          options.isDev && 'react-refresh/babel',
+        ]
+          .filter(Boolean),
         cacheDirectory: !options.isDev,
         compact: true,
       },
@@ -69,5 +74,7 @@ module.exports = (options) => ({
   },
   plugins: [
     !options.isDev && options.terser && new TerserWebpackPlugin(options.terser),
-  ].filter(Boolean),
+    options.isDev && new ReactRefreshWebpackPlugin(),
+  ]
+    .filter(Boolean),
 });
