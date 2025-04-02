@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/pieced-team/webpack-config",
   "files": [
-    "index.js"
+    "dist"
   ],
   "keywords": [
     "webpack",
