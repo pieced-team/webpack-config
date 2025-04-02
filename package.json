@@ -7,7 +7,6 @@
   "license": "MIT",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "prepublishOnly": "pnpm run build",
     "build": "cross-env NODE_ENV=production pnpm -r --filter=./packages/* run build",
     "lint-staged": "lint-staged",
     "lint:eslint": "eslint --ext .js packages"
