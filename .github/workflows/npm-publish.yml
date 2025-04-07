@@ -33,6 +33,7 @@ jobs:
 
       - name: Change Version
         run: |
+          npx conventional-changelog -p angular -i CHANGELOG.md -s
           pnpm version patch --no-git-tag-version
           VERSION=$(node -p "require('./package.json').version")
           pnpm -r --filter=./packages/* exec npm version $VERSION --no-git-tag-version
