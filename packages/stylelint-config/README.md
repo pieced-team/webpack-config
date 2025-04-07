@@ -1,4 +1,4 @@
-<h1 align="center">@pieced/babel-plugin-auto-css-modules 👋</h1>
+<h1 align="center">@pieced/stylelint-config 👋</h1>
 <p align="center">
   <a href="https://www.npmjs.com/package/@pieced/stylelint-config" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/@pieced/stylelint-config.svg">
@@ -14,7 +14,7 @@
   </a>
 </p>
 
-> Automatically identify CSS Modules
+> stylelint configuration
 
 ## Install
 

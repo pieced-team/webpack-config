@@ -17,7 +17,7 @@
   </a>
 </p>
 
-> Automatically identify CSS Modules
+> eslint configuration
 
 ## Install
 

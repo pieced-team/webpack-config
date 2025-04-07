@@ -14,7 +14,7 @@
   </a>
 </p>
 
-> Automatically identify CSS Modules
+> webpack configuration
 
 ## Install
 

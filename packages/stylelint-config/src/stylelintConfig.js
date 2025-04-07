@@ -2,7 +2,7 @@ module.exports = {
   extends: [
     'stylelint-config-standard-scss',
     'stylelint-config-recess-order',
-  ],
+  ].map(require.resolve),
   rules: {
     'selector-list-comma-newline-after': null,
     'declaration-colon-newline-after': null,
