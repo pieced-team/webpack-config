@@ -1,0 +1,29 @@
+{
+  "name": "@pieced/stylelint-config",
+  "version": "1.1.3",
+  "description": "stylelint configuration",
+  "author": "mingdev <mingdev@163.com>",
+  "license": "MIT",
+  "main": "./dist/stylelintConfig.js",
+  "scripts": {
+    "build": "babel src --out-dir dist"
+  },
+  "dependencies": {
+    "stylelint-config-recess-order": "^4.6.0",
+    "stylelint-config-standard-scss": "^11.1.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^15.11.0",
+    "stylelint-config-recess-order": "^4.6.0",
+    "stylelint-config-standard-scss": "^11.1.0"
+  },
+  "homepage": "https://github.com/pieced-team/webpack-config",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "config"
+  ]
+}

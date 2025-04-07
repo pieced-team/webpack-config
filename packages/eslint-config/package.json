@@ -1,0 +1,36 @@
+{
+  "name": "@pieced/eslint-config",
+  "version": "1.1.3",
+  "description": "eslint configuration",
+  "author": "mingdev <mingdev@163.com>",
+  "license": "MIT",
+  "main": "./dist/eslintConfig.js",
+  "scripts": {
+    "build": "babel src --out-dir dist"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-import-resolver-webpack": "^0.13.10",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-plugin-import": "^2.25.0",
+    "eslint-plugin-jsx-a11y": "^6.5.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-config-airbnb": "^19.0.0"
+  },
+  "homepage": "https://github.com/pieced-team/webpack-config",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "config"
+  ]
+}
