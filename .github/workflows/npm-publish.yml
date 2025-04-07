@@ -38,6 +38,7 @@ jobs:
           pnpm -r --filter=./packages/* exec npm version $VERSION --no-git-tag-version
           pnpm changelog
           git add . && git commit -m "chore(release): $VERSION"
+          git tag v$VERSION
 
       - name: Build and Publish
         run: |
