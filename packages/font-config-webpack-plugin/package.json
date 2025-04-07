@@ -1,6 +1,6 @@
 {
   "name": "@pieced/font-config-webpack-plugin",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Automatically configuration webpack5 font loader",
   "author": "mingdev <mingdev@163.com>",
   "license": "MIT",
