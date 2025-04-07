@@ -36,8 +36,8 @@ jobs:
           pnpm version patch --no-git-tag-version
           VERSION=$(node -p "require('./package.json').version")
           pnpm -r --filter=./packages/* exec npm version $VERSION --no-git-tag-version
-          pnpm run changelog
-          git add . && git commit -m "chore(release): publish $VERSION"
+          pnpm changelog
+          git add . && git commit -m "chore(release): $VERSION"
 
       - name: Build and Publish
         run: |
