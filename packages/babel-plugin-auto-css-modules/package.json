@@ -1,6 +1,6 @@
 {
   "name": "@pieced/babel-plugin-auto-css-modules",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Automatically configuration babel css-modules",
   "author": "mingdev <mingdev@163.com>",
   "license": "MIT",
