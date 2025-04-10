@@ -1,4 +1,4 @@
-## 1.1.11 (2025-04-10)
+## [1.1.11](https://github.com/pieced-team/webpack-config/compare/v1.1.10...v1.1.11) (2025-04-10)
 
 
 ### Features
@@ -7,21 +7,12 @@
 
 
 
-## 1.1.10 (2025-04-07)
+## [1.1.10](https://github.com/pieced-team/webpack-config/compare/1bfd3c7bf27d88ab3b3ee327f94da8bcd268ab68...v1.1.10) (2025-04-07)
 
 
 ### Features
 
-* **changelog:** git提交后增加标签 ([fec1801](https://github.com/pieced-team/webpack-config/commit/fec1801c1b3cd6e46c8a6179de7667354eba3196))
-
-
-
-## 1.1.9 (2025-04-07)
-
-
-### Features
-
-* **changelog:** 修改生成CHANGELOG.md方式 ([bc03750](https://github.com/pieced-team/webpack-config/commit/bc03750183840d5e527b3650cea7a01fe03f6704))
+* **changelog:** 增加CHANGELOG.md的生成 ([1bfd3c7](https://github.com/pieced-team/webpack-config/commit/1bfd3c7bf27d88ab3b3ee327f94da8bcd268ab68))
 
 
 
