@@ -1,6 +1,6 @@
 {
   "name": "@pieced/style-config-webpack-plugin",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "description": "Automatically configuration webpack5 style loader",
   "author": "mingdev <mingdev@163.com>",
   "license": "MIT",

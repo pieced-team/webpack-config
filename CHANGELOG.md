@@ -1,3 +1,12 @@
+## 1.1.12 (2025-04-10)
+
+
+### Features
+
+* **publish:** 发布后不通知 ([79b9939](https://github.com/pieced-team/webpack-config/commit/79b99398bcd604dd55ac7f847960b4134211c0ba))
+
+
+
 ## [1.1.11](https://github.com/pieced-team/webpack-config/compare/v1.1.10...v1.1.11) (2025-04-10)
 
 
