@@ -1,4 +1,4 @@
-## 1.1.12 (2025-04-10)
+## [1.1.12](https://github.com/pieced-team/webpack-config/compare/v1.1.11...v1.1.12) (2025-04-10)
 
 
 ### Features
