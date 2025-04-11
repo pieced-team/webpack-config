@@ -23,6 +23,7 @@ jobs:
         with:
           node-version: 22
           cache: 'pnpm'
+          registry-url: https://registry.npmjs.org
 
       - name: Set Git User Info
         run: |
@@ -30,7 +31,7 @@ jobs:
           git config user.email ${{ secrets.GIT_USER_EMAIL }}
 
       - name: Install Dependencies
-        run: pnpm install --registry https://registry.npmjs.org
+        run: pnpm install
 
       - name: Change Version and Generate Changelog
         run: |
@@ -44,7 +45,7 @@ jobs:
       - name: Build and Publish
         run: |
           pnpm run build
-          pnpm -r --filter=./packages/* publish --registry https://registry.npmjs.org --access public
+          pnpm -r --filter=./packages/* publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
