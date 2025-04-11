@@ -10,40 +10,42 @@ jobs:
     name: Npm Publish
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
 
-      - name: Setup node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: 'pnpm'
           registry-url: https://registry.npmjs.com
 
+      - name: Set Git User Info
+        run: |
+          git config user.name ${{ secrets.GIT_USER_NAME }}
+          git config user.email ${{ secrets.GIT_USER_EMAIL }}
+
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Set Git User Info
+      - name: Change Version and Generate Changelog
         run: |
-          git config --global user.email ${{ secrets.GIT_USER_EMAIL }}
-          git config --global user.name ${{ secrets.GIT_USER_NAME }}
-
-      - name: Change Version
-        run: |
-          pnpm version patch --no-git-tag-version
-          VERSION=$(node -p "require('./package.json').version")
+          VERSION=$(pnpm version patch --no-git-tag-version | sed 's/^v//')
           pnpm -r --filter=./packages/* exec npm version $VERSION --no-git-tag-version
-          pnpm changelog
-          git add . && git commit -m "chore(release): $VERSION"
-          git tag v$VERSION
+          npx standard-changelog
+          git add .
+          git commit -m "chore(release): v$VERSION"
+          git tag -a v$VERSION -m "Release v$VERSION"
 
       - name: Build and Publish
         run: |
           pnpm run build
-          pnpm -r --filter=./packages/* publish --access public --quiet
+          pnpm -r --filter=./packages/* publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
