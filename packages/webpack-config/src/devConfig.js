@@ -13,6 +13,14 @@ const resolve = (dir) => path.join(process.cwd(), dir);
 module.exports = merge(baseConfig, {
   mode: 'development',
   devtool: 'eval-cheap-module-source-map',
+  devServer: {
+    allowedHosts: 'all',
+    historyApiFallback: true,
+    hot: true,
+    host: '0.0.0.0',
+    port: 10080,
+    static: true,
+  },
   plugins: [
     new DotEnvWebpackPlugin({
       path: '.env.development',
