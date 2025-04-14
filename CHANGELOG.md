@@ -1,3 +1,14 @@
+## [1.1.14](https://github.com/pieced-team/webpack-config/compare/v1.1.13...v1.1.14) (2025-04-14)
+
+
+### Features
+
+* **config:** 增加webpack和webpack-dev-server可执行脚本 ([d62f677](https://github.com/pieced-team/webpack-config/commit/d62f677846e526963d4b013953e13fefafb05baf))
+* **config:** 增加多环境配置的具名函数 ([b590079](https://github.com/pieced-team/webpack-config/commit/b590079eaf08fac4c110ef75b5964f6c664a613c))
+* **config:** 开发环境增加默认配置 ([55b6522](https://github.com/pieced-team/webpack-config/commit/55b652297896769693fd19b29ccbfbed58c6a7d0))
+
+
+
 ## [1.1.13](https://github.com/pieced-team/webpack-config/compare/v1.1.12...v1.1.13) (2025-04-11)
 
 
