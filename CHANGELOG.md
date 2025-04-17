@@ -1,3 +1,12 @@
+## [1.1.15](https://github.com/pieced-team/webpack-config/compare/v1.1.14...v1.1.15) (2025-04-17)
+
+
+### Features
+
+* **config:** 修改webpack和webpack-dev-server可执行脚本的方式 ([39bb14d](https://github.com/pieced-team/webpack-config/commit/39bb14dc5513eedee7c8e01413d6270e2d2a7119))
+
+
+
 ## [1.1.14](https://github.com/pieced-team/webpack-config/compare/v1.1.13...v1.1.14) (2025-04-14)
 
 
