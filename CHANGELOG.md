@@ -1,3 +1,14 @@
+## [1.1.16](https://github.com/pieced-team/webpack-config/compare/v1.1.15...v1.1.16) (2025-05-07)
+
+
+### Features
+
+* **bin:** 删除无用的bin文件 ([383eaf3](https://github.com/pieced-team/webpack-config/commit/383eaf3b7540e8a18500b8452ba187d7d669e9fe))
+* **config:** 修改dotEnv实现方式以及修改导出对象 ([bcfb145](https://github.com/pieced-team/webpack-config/commit/bcfb1455ad12a18f34e74624eed8348c8a77f9cc))
+* **README:** 修改自述文件内容 ([0384a2c](https://github.com/pieced-team/webpack-config/commit/0384a2cfd5473955270982eba9865f540bc808b6))
+
+
+
 ## [1.1.15](https://github.com/pieced-team/webpack-config/compare/v1.1.14...v1.1.15) (2025-04-17)
 
 
