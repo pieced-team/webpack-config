@@ -4,7 +4,6 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const DotEnvWebpackPlugin = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseConfig = require('./baseConfig');
 
@@ -14,12 +13,6 @@ module.exports = merge(baseConfig, {
   mode: 'production',
   devtool: false,
   plugins: [
-    new DotEnvWebpackPlugin({
-      path: `.env.${process.env.MODE_ENV || 'production'}`,
-      silent: true,
-      systemvars: true,
-      defaults: '.env',
-    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: resolve('index.ejs'),
