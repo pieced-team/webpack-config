@@ -25,17 +25,17 @@ npm i @pieced/webpack-config -D
 ## Usage
 
 ```js
-const webpackConfig = require('@pieced/webpack-config');
+const {getWebConfig} = require('@pieced/webpack-config');
 
-module.exports = webpackConfig();
+module.exports = getWebConfig();
 ```
 
 ## Usage Dev
 
 ```js
-const webpackConfig = require('@pieced/webpack-config');
+const {getWebConfig} = require('@pieced/webpack-config');
 
-module.exports = webpackConfig({
+module.exports = getWebConfig({
   devServer: {
     // xxx
   },
