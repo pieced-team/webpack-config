@@ -4,6 +4,7 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const DotEnvWebpackPlugin = require('dotenv-webpack');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const baseConfig = require('./baseConfig');
 
@@ -21,6 +22,12 @@ module.exports = merge(baseConfig, {
     static: true,
   },
   plugins: [
+    new DotEnvWebpackPlugin({
+      path: '.env.development',
+      silent: true,
+      systemvars: true,
+      defaults: '.env',
+    }),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'index.html',
