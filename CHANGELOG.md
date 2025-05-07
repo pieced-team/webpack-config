@@ -1,3 +1,12 @@
+## [1.1.17](https://github.com/pieced-team/webpack-config/compare/v1.1.16...v1.1.17) (2025-05-07)
+
+
+### Features
+
+* **config:** 修改函数的参数以及还原dotenv配置 ([ffc2f04](https://github.com/pieced-team/webpack-config/commit/ffc2f045f17764a25b4bb498bfe2625c1bcccfce))
+
+
+
 ## [1.1.16](https://github.com/pieced-team/webpack-config/compare/v1.1.15...v1.1.16) (2025-05-07)
 
 
