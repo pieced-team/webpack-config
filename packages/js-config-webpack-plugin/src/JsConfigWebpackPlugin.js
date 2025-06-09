@@ -14,17 +14,22 @@ module.exports = class JsConfigWebpackPlugin {
     const opt = getOptions(compiler);
     const cfg = config(opt);
     // Merge config
-    // eslint-disable-next-line
-    compiler.options.output.filename = opt.filename;
-    // eslint-disable-next-line
-    compiler.options.output.chunkFilename = opt.chunkFilename;
+    if (opt.filename) {
+      // eslint-disable-next-line
+      compiler.options.output.filename = opt.filename;
+    }
+    if (opt.chunkFilename) {
+      // eslint-disable-next-line
+      compiler.options.output.chunkFilename = opt.chunkFilename;
+    }
     compiler.options.module.rules.push(...cfg.module.rules);
     cfg.plugins.forEach((plugin) => plugin.apply(compiler));
   }
 
   getOptions(compiler) {
-    const { mode } = compiler.options;
+    const { mode, target } = compiler.options;
     const isDev = mode === 'development';
+    const isWeb = target === 'web';
     const defaultOpt = {
       suffix: ['js', 'jsx', 'mjs'],
       filename: isDev ? '[name].js' : 'static/js/[contenthash:10].js',
@@ -42,6 +47,6 @@ module.exports = class JsConfigWebpackPlugin {
         },
       },
     };
-    return mergeFn({}, defaultOpt, this.options, { isDev, context: compiler.context || process.cwd(), mode });
+    return mergeFn({}, defaultOpt, this.options, { isDev, isWeb, context: compiler.context || process.cwd(), mode });
   }
 };

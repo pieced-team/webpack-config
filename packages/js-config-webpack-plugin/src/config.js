@@ -63,8 +63,8 @@ module.exports = (options) => ({
           '@babel/preset-react',
         ],
         plugins: [
-          '@pieced/babel-plugin-auto-css-modules',
-          options.isDev && 'react-refresh/babel',
+          options.isWeb && '@pieced/babel-plugin-auto-css-modules',
+          options.isWeb && options.isDev && 'react-refresh/babel',
         ]
           .filter(Boolean),
         cacheDirectory: !options.isDev,
@@ -74,7 +74,7 @@ module.exports = (options) => ({
   },
   plugins: [
     !options.isDev && options.terser && new TerserWebpackPlugin(options.terser),
-    options.isDev && new ReactRefreshWebpackPlugin(),
+    options.isWeb && options.isDev && new ReactRefreshWebpackPlugin(),
   ]
     .filter(Boolean),
 });
