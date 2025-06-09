@@ -1,3 +1,12 @@
+## [1.1.18](https://github.com/pieced-team/webpack-config/compare/v1.1.17...v1.1.18) (2025-06-09)
+
+
+### Features
+
+* **config:** 对配置进行web环境判断 ([9df390d](https://github.com/pieced-team/webpack-config/commit/9df390d9e75404893683db8f6fa0705499a44643))
+
+
+
 ## [1.1.17](https://github.com/pieced-team/webpack-config/compare/v1.1.16...v1.1.17) (2025-05-07)
 
 
